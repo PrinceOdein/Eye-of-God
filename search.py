@@ -5,10 +5,10 @@ import pandas as pd
 from storage import DBStorage
 from urllib.parse import quote_plus
 
-def search_api(query, pages=int(RESULT_COUNT/2)):
+def search_api(query, pages=int(RESULT_COUNT/10)):
     results = []
     for i in range(0, pages):
-        start = i * 2 + i
+        start = i * 10 + i
         url = SEARCH_URL.format(
             key=SEARCH_KEY,
             cx=SEARCH_ID,
