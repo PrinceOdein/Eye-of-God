@@ -1,0 +1,3 @@
+fr = "jedi"
+
+print(fr)
