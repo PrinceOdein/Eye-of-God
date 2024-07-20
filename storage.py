@@ -23,5 +23,5 @@ def get_ranked_results(query, results):
             relevance_score = matching_result['relevance'].values[0] + 1
             search_results.loc[(search_results['query'] == query) & (search_results['link'] == result['link']), 'relevance'] = relevance_score
             result['relevance'] = relevance_score
-            ranked_results.append(result)
+            ranked_results._append(result)
     return sorted(ranked_results, key=lambda x: x['relevance'], reverse=True)
