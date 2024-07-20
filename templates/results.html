@@ -1,0 +1,23 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Search Results</title>
+</head>
+<body>
+    <h1>Search Results</h1>
+    <a href="/">Back to Home</a>
+    <ul>
+        {% for result in results %}
+            <li>
+                <a href="{{ result.link }}">{{ result.title }}</a>
+                <p>{{ result.snippet }}</p>
+            </li>
+        {% endfor %}
+    </ul>
+    {% if results|length == 0 %}
+        <p>No results found.</p>
+    {% endif %}
+</body>
+</html>
